@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        margin-left: 500px;
+    }
+</style>
+
+<body>
+    <div class="main">
+
+        <img src="images/off.gif" alt="">
+        <button id="on" onclick="on(this)">OFF</button>
+
+    </div>
+</body>
+<script>
+    let bulb = document.querySelector('img');
+
+    function on(btn) {
+
+        let toggle = btn.innerText
+        if (toggle == "ON") {
+            bulb.src = "images/on.gif";
+            btn.innerText = "OFF"
+        } else {
+            bulb.src = "images/off.gif";
+            btn.innerText = "ON"
+        }
+
+    }
+
+
+</script>
+
+</html>

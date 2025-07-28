@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .main{
+            margin-left:500px ;
+        }
+    </style>
+
+<body>
+    <div class="main">
+        <button id="on" onclick="on()">ON</button>
+        <img src="images/off.gif" alt="">
+        <button id="on" onclick="off()">OFF</button>
+        
+    </div>
+</body>
+<script>
+    let bulb = document.querySelector('img');
+
+    function on() {
+        bulb.src="images/on.gif";
+    }
+
+    function off() {
+         bulb.src="images/off.gif";
+    }
+</script>
+
+</html>

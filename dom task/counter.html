@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<style>
+    .main {
+        width: 400px;
+        margin: 20px 400px;
+    }
+
+    .main image {
+        width: 150px;
+    }
+</style>
+
+<body>
+    <div class="mian">
+        <img src="images/3.jpg" id="image" alt="">
+        <div>
+            <button onclick="add()" id="add">+</button>
+            <button id="num">0</button>
+            <button onclick="minus()" id="minus">-</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    let plusbtn = document.getElementById("add");
+    let btn = document.getElementById("num");
+    let minusbtn = document.getElementById("minus");
+
+ addbtn.addEventListener("click",()=>{
+    let  value= Number(btn.innerText);
+    if (value<5) {
+        btn.innerText=value+1
+        minusbtn.disable=false
+    } else {
+        addbtn.disable=true
+    }
+ })
+ minusbtn.addEventListener("click",()=>{
+    let  value= Number(btn.innerText);
+    if (value<0) {
+        btn.innerText=value-1
+        minusbtn.disable=false
+    } else {
+        addbtn.disable=true
+    }
+ })
+ 
+ 
+
+    
+</script>
+
+</html>

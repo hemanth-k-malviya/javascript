@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event of bg change</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+           padding: 10px;
+            border: 2px solid;
+            margin: auto;
+           transition: 1s;
+        }
+
+        .btn {
+            margin: 10px 602px;
+            padding: 10px 10px;
+
+        }
+
+        .bgcolor {
+            background-color: aqua;
+            color: red;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+     <div class="box"><!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ab quas quae alias eum, nam quo quis nisi ex quam. Placeat impedit veritatis ea neque quo vero maiores omnis eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ab quas quae alias eum, nam quo quis nisi ex quam. Placeat impedit veritatis ea neque quo vero maiores omnis eaque! --></div>
+    <div class="btn">
+        <button onclick="addclass()">ADD</button>
+        <button onclick="removeclass()">REMOVE</button>
+        <button onclick="toggleclass()">TOGGLE</button>
+    </div>
+</body>
+<script>
+
+    let box = document.querySelector(".box")
+    let addclass = () => {
+        box.innerHTML="hello world";
+        box.classList.add("bgcolor")
+       
+    }
+     function removeclass() {
+        box.innerHTML="   ";
+        box.classList.remove("bgcolor")
+    }
+   let  toggleclass=function(){
+
+    box.classList.toggle("bgcolor")
+   }
+
+</script>
+
+</html>

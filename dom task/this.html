@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>this Fn</title>
+</head>
+<style>
+    .main {
+        width: 750px;
+        /* height:700px; */
+        margin: auto;
+        border: 1px solid;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80"
+            alt="" width="750px" height="500px" id="img1">
+
+
+        <img src="https://img.freepik.com/premium-photo/morskie-oko-tatry_1045114-186.jpg?semt=ais_hybrid"
+            onmouseover="changeImgage(this)" alt="" width="24%">
+        <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80"
+            onmouseover="changeImgage(this)" alt="" width="24%">
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg"
+            onmouseover="changeImgage(this)" alt="" width="24%">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvimPzwOXCXDCFyo4gygMnyo_C3kJ6XoGCDQ&s"
+            onmouseover="changeImgage(this)" alt="" width="25%">
+
+    </div>
+    <script>
+        let img1 = document.querySelector("#img1");
+
+        function changeImgage(changeImg) {
+            // console.log(currentimg)
+            let changeImgsrc = changeImg.src;
+            // console.log(changeImgsrc)
+           img1.src=changeImgsrc;
+        }
+
+    </script>
+
+</body>
+
+</html>

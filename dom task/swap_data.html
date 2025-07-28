@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        width: 1000px;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+    }
+
+    #left {
+        border: 1px solid;
+        padding: 10px;
+        text-align: center;
+        background-color: yellowgreen;
+        border-radius: 10px;
+    }
+
+    #right {
+        text-align: center;
+        border: 1px solid;
+        padding: 10px;
+        background-color: rgb(184, 19, 110);
+        border-radius: 10px;
+    }
+
+    button {
+        margin: 10px 400px;
+        padding: 20px 60px;
+        border-radius: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div id="left">
+                <h1>SWAP DATA 1</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi deleniti, magni expedita harum
+                    tempora
+                    similique amet illo unde iste fuga voluptatibus molestias odio magnam. In dolore cum sed
+                    necessitatibus
+                    excepturi.
+                </p>
+            </div>
+            <div id="right">
+                <h1>SWAP DATA 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 1111Animi, corrupti dolorem a sapiente rem
+                    inventore
+                    repellendus amet quasi voluptatum impedit perspiciatis veritatis molestiae possimus deleniti ad. Ab
+                    qui
+                    quam magni.</p>
+            </div>
+        </div>
+        <button onclick="swap()">SWAP DATA</button>
+    </div>
+</body>
+<script>
+
+let left=document.getElementById("left");
+let right=document.getElementById("right");
+
+function swap(){
+    let leftData =left.innerHTML;
+    let rightData=right.innerHTML;
+
+    left.innerHTML=rightData;
+    right.innerHTML=leftData;
+}
+
+
+
+    // function swap() {
+
+    //     let left = document.getElementById("left").innerHTML;
+    //     let right = document.getElementById("right").innerHTML;
+
+    //     document.getElementById('right').innerHTML = left;
+    //     document.getElementById('left').innerHTML = right;
+
+    // }
+
+
+</script>
+
+</html>
