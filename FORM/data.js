@@ -44,7 +44,7 @@ document.getElementById("country").addEventListener("change", (country_name) => 
     })
     let statesName = ' <option value="">Select State</option>'
     filterState.forEach((value) => {
-        statesName += ' <option value="'+ value.name +'">'+ value.name + '</option>'
+        statesName += ' <option value="' + value.name + '">' + value.name + '</option>'
     })
     document.getElementById("state").innerHTML = statesName;
 
@@ -53,6 +53,7 @@ document.getElementById("country").addEventListener("change", (country_name) => 
 let allData = [];
 
 function displayData(allData) {
+
     if (allData.length > 0) {
         userdisplay = '';
         allData.forEach((v, i) => {
@@ -84,7 +85,8 @@ displayData(allData);
 
 document.getElementById("userform").addEventListener("submit", (e) => {
     e.preventDefault();
-    const user = {
+    let oldData = JSON.parse(localStorage.getItem("user")) ?? [];
+    const userObj = {
         name: e.target.uname.value,
         email: e.target.uemail.value,
         number: e.target.unumber.value,
@@ -94,7 +96,10 @@ document.getElementById("userform").addEventListener("submit", (e) => {
         country_name: e.target.country.value,
         state_name: e.target.state.value
     }
-    allData = [user, ...allData];
+    oldData.push(userObj);
+
+    localStorage.setItem('user', JSON.stringify(oldData));
+    allData = [userObj, ...allData];
     displayData(allData);
     e.target.reset();
     let statesName = ' <option value="">Select State</option>'
@@ -102,8 +107,8 @@ document.getElementById("userform").addEventListener("submit", (e) => {
 
 });
 
-function deleteUser(i){
-console.log(i);
-allData.splice(i,1);
-displayData(allData);
+function deleteUser(i) {
+    console.log(i);
+    allData.splice(i, 1);
+    displayData(allData);
 }
